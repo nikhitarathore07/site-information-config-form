@@ -1,0 +1,7 @@
+config-default:
+  js:
+    js/config_custom.js: {}
+  css:
+    css/config_custom.css: {}  
+  dependencies:
+    - core/jquery

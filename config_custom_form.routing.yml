@@ -1,0 +1,8 @@
+config_custom_form.admin_settings:
+  path: '/admin/config/system/site-information'
+  defaults:
+    _form: '\Drupal\config_custom_form\Form\ExtendedSiteInformationForm'
+    _title: 'Site API Key'
+  requirements:
+    _permission: 'administer site configuration'
+
