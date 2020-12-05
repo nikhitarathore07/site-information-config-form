@@ -1,5 +1,5 @@
-name: Site-Configuration Custom Form
-description: Configuration Form for Site-Information
+name: Siteapikey Custom Field
+description: Provides Field to add siteapikey for system Configuration.
 version: VERSION
 core: 8.x
 type: module
