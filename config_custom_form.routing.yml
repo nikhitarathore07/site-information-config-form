@@ -2,7 +2,20 @@ config_custom_form.admin_settings:
   path: '/admin/config/system/site-information'
   defaults:
     _form: '\Drupal\config_custom_form\Form\ExtendedSiteInformationForm'
-    _title: 'Site API Key'
+    _title: 'Site Information'
   requirements:
     _permission: 'administer site configuration'
+    
+config_custom_form.page_api:
+  path: '/page_json/{api_key}/{node}'
+  defaults:
+    _controller: '\Drupal\config_custom_form\Controller\CustomJsonPageApi::renderApi'
+    _title: 'Access Page Content in JSON'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node
+      
 

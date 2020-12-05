@@ -3,3 +3,5 @@ description: Configuration Form for Site-Information
 version: VERSION
 core: 8.x
 type: module
+dependencies:
+  - drupal:jsonapi

@@ -5,10 +5,9 @@ namespace Drupal\config_custom_form\Form;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\system\Form\SiteInformationForm;
 
-
 class ExtendedSiteInformationForm extends SiteInformationForm {
  
-   /**
+   /**b 
    * {@inheritdoc}
    */
     public function buildForm(array $form, FormStateInterface $form_state) {
@@ -20,7 +19,10 @@ class ExtendedSiteInformationForm extends SiteInformationForm {
       '#default_value' => $site_config->get('siteapikey') ?: 'No API Key yet',
       '#description' => t("Custom field to set the API Key"),
     ];
-    
+    if ($site_config->get('siteapikey')) {
+      $form['actions']['submit']['#value'] = $this->t('Update Configuration');
+
+    }
     return $form;
   }
   

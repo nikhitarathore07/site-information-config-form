@@ -8,7 +8,6 @@ use Symfony\Component\Routing\RouteCollection;
  * Listens to the dynamic route events.
  */
 class RouteSubscriber extends RouteSubscriberBase {
-
   /**
    * {@inheritdoc}
    */
@@ -16,5 +15,4 @@ class RouteSubscriber extends RouteSubscriberBase {
     if ($route = $collection->get('system.site_information_settings')) 
       $route->setDefault('_form', '\Drupal\config_custom_form\Form\ExtendedSiteInformationForm');
   }
-
 }
